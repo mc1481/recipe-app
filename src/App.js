@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import MealType from './components/MealType';
 import VeganSearch from './components/VeganSearch';
@@ -12,7 +12,7 @@ import MealTypeRecipe from './components/MealTypeRecipe';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/veganSearch" component={VeganSearch} />
