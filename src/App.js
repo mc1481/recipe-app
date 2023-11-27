@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import MealType from './components/MealType';
+import VeganSearch from './components/VeganSearch';
+import VegetarianSearch from './components/VegetarianSearch';
+import VeganRecipe from './components/VeganRecipe';
+import VegetarianRecipe from './components/VegetarianRecipe';
+import Cuisine from './components/Cuisine';
+import CuisineRecipe from './components/CuisineRecipe';
+import MealTypeRecipe from './components/MealTypeRecipe';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/veganSearch" component={VeganSearch} />
+        <Route path="/cuisine/:cuisineType/:diet" component={Cuisine} />
+        <Route path="/vegetarianSearch" component={VegetarianSearch} />
+        <Route path="/veganRecipe/:id" component={VeganRecipe} />
+        <Route path="/cuisineRecipe/:id" component={CuisineRecipe} />
+        <Route path="/vegetarianRecipe/:id" component={VegetarianRecipe} />
+        <Route path="/mealtype/:diet/:type" component={MealType} />
+        <Route path="/mealtypeRecipe/:id" component={MealTypeRecipe} />
+      </Switch>
+    </Router>
   );
 }
 
