@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/recipe-app/static/css/main.3ec619ce.css",
+    "main.js": "/recipe-app/static/js/main.68a5248e.js",
+    "static/js/787.08734711.chunk.js": "/recipe-app/static/js/787.08734711.chunk.js",
+    "static/media/bowl-hand-3.jpeg": "/recipe-app/static/media/bowl-hand-3.8195c8d90b18836d9601.jpeg",
+    "static/media/pink-4.jpg": "/recipe-app/static/media/pink-4.d951513c6de3ba6dadbe.jpg",
+    "static/media/home-button-image.jpg": "/recipe-app/static/media/home-button-image.1351302d91dd783dcd67.jpg",
+    "index.html": "/recipe-app/index.html",
+    "main.3ec619ce.css.map": "/recipe-app/static/css/main.3ec619ce.css.map",
+    "main.68a5248e.js.map": "/recipe-app/static/js/main.68a5248e.js.map",
+    "787.08734711.chunk.js.map": "/recipe-app/static/js/787.08734711.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ec619ce.css",
+    "static/js/main.68a5248e.js"
+  ]
+}
