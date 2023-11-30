@@ -7,7 +7,7 @@ body {
 }
 
 .home-title {
-    max-width: 30%;
+    max-width: 34%;
     height: 20vh;
     color: white;
 }
@@ -28,7 +28,7 @@ body {
     color: #581845;
     font-weight: bold;
     margin-top: 4%;
-    font-size: 48px;
+    font-size: 42px;
     margin-left: 5%;
 }
 
