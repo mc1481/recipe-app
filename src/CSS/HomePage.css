@@ -193,7 +193,6 @@ body {
     justify-content: space-between;
     max-width: 77%;
     margin-left: 1%;
-    border: 1px solid;
 }
 
 .recipe-card {
@@ -202,13 +201,11 @@ body {
     box-sizing: border-box;
     text-align: center;
     max-width: 28%;
-    border: 1px solid;
     
 }
 
 .recipe-card img {
     width:  340px;
-    border-radius: 10px;
 }
 
 .recipe-card p {
