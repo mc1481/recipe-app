@@ -7,9 +7,10 @@ body {
 }
 
 .home-title {
-    max-width: 34%;
+    max-width: 35%;
     height: 20vh;
     color: white;
+    border: 1px solid;
 }
 
 .purple-div {
@@ -28,7 +29,7 @@ body {
     color: #581845;
     font-weight: bold;
     margin-top: 4%;
-    font-size: 42px;
+    font-size: 36px;
     margin-left: 5%;
 }
 
@@ -37,7 +38,7 @@ body {
     top: 5%;
     margin-left: 35%;
     border-radius: 10px;
-    font-size: 24px;
+    font-size: 22px;
     padding: 10px 20px;
     background-color: #581845;
     font-weight: bold;
@@ -50,7 +51,7 @@ body {
     top: 5%;
     margin-left: 51%;
     border-radius: 10px;
-    font-size: 24px;
+    font-size: 22px;
     padding: 10px 20px;
     font-weight: bold;
     background-color: #581845; 
@@ -62,7 +63,7 @@ body {
     position: absolute;
     top: 5%;
     margin-left: 70%;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     color: #581845;
 }
@@ -75,11 +76,11 @@ body {
     background-color: #581845;
     padding: 8px 10px;
     border-radius: 10px;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .meal-dropdown select {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     padding: 8px 10px;
     border-radius: 10px;
