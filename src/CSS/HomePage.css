@@ -10,7 +10,7 @@ body {
     max-width: 35%;
     height: 20vh;
     color: white;
-    border: 1px solid;
+ 
 }
 
 .purple-div {
@@ -193,6 +193,7 @@ body {
     justify-content: space-between;
     max-width: 77%;
     margin-left: 1%;
+    border: 1px solid;
 }
 
 .recipe-card {
@@ -200,25 +201,26 @@ body {
     margin-bottom: 70px;
     box-sizing: border-box;
     text-align: center;
-    max-width: 400px;
+    max-width: 28%;
+    border: 1px solid;
     
 }
 
 .recipe-card img {
-    width: 390px;
+    width:  340px;
     border-radius: 10px;
 }
 
 .recipe-card p {
     color: #581845;
     font-weight: bold;
-    font-size: 33px;
+    font-size: 30px;
     margin-top: 3%;
 }
 
 .recipe-details-button button{
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
