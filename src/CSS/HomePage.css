@@ -206,6 +206,7 @@ body {
 
 .recipe-card img {
     width:  340px;
+    border-radius: 8px;
 }
 
 .recipe-card p {
