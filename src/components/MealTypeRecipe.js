@@ -5,9 +5,9 @@ import BackButton from './BackButton';
 import FetchRecipeData from './FetchRecipeData';
 
 function MealTypeRecipe () {
-    const { id } = useParams();
+    const { id } = useParams(); // extract recipe id from url that we want the information on
     const apiKey = "d0f20c3fe5af4078b0d2bb104a92fde9";
-    const [recipeData, setRecipeData] = useState(null);
+    const [recipeData, setRecipeData] = useState(null); // instructions, ingredients, image, title of recipe
   
     // function for handling data fetched by FetchRecipeData component 
     function handleRecipeDataFetched(data) {
@@ -19,6 +19,7 @@ function MealTypeRecipe () {
       console.error("Error fetching recipe data: ", error);
     };
 
+    // display the recipe details on the screen
     return (
         <div className="mealtype-recipe-background">
             <HomeButton />

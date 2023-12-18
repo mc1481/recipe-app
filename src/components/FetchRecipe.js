@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from 'react';
 
-// this function is used by VeganSearch.js, VegetarianSearch.js, CuisineRecipe.js and MealTypeRecipe.js
+// this function is used by VeganSearch.js, VegetarianSearch.js, the necessary parameters are passed in
 function FetchRecipes({ diet, searchTerm, onRecipesFetched, onNoResults, apiKey}) {
   const [loading, setLoading] = useState(false);
 
@@ -10,6 +10,7 @@ function FetchRecipes({ diet, searchTerm, onRecipesFetched, onNoResults, apiKey}
         fetchRecipes();
     }
 
+    // fetch recipes based on users search term and whether they want vegan or vegetarian recipes
     async function fetchRecipes() {
         setLoading(true);
         try {
@@ -17,6 +18,7 @@ function FetchRecipes({ diet, searchTerm, onRecipesFetched, onNoResults, apiKey}
                 `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${searchTerm}&number=24&diet=${diet}`
             );
 
+            // if no response, handle this with onNoResults() function, otherwise set the recipes to the api response
             if (response.data.results.length === 0) {
                 onNoResults();
             } else {

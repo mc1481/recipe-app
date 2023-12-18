@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import HomeButton from './HomeButton';
 
 function MealType() {
-    const [recipes, setRecipes] = useState([]);
+    const [recipes, setRecipes] = useState([]); // recipes rendered to screen such as breakfast, main course, dessert
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const apiKey = "d0f20c3fe5af4078b0d2bb104a92fde9";
@@ -40,6 +40,7 @@ function MealType() {
       return <div>Error: {error.message}</div>;
     }
   
+    // display the available recipes for the option the user has chosen
     return (
       <div>
         <HomeButton />

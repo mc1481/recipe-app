@@ -10,18 +10,19 @@ function FetchRecipeData({ id, apiKey, onRecipeDataFetched, onError }) {
     async function fetchRecipeData(id) {
         try {
           const ingredientsResponse = await axios.get(
-            `https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=${apiKey}`
+            `https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=${apiKey}` // get ingredients
           );
           const instructionsResponse = await axios.get(
-            `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${apiKey}`
+            `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${apiKey}` // get instructions
           );
           const imageResponse = await axios.get(
-            `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`
+            `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}` // we can extract the image from this request
           );
           const summaryResponse = await axios.get(
-            `https://api.spoonacular.com/recipes/${id}/summary?apiKey=${apiKey}`
+            `https://api.spoonacular.com/recipes/${id}/summary?apiKey=${apiKey}` // we can extract the recipe title from this request
           );
 
+          // set the recipe data variable
           const recipeData = {
             ingredients: ingredientsResponse.data.ingredients,
             instructions: instructionsResponse.data,

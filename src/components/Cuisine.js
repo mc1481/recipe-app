@@ -6,7 +6,7 @@ import HomeButton from './HomeButton';
 import BackButton from './BackButton';
 
 function Cuisine() {
-  const [recipes, setRecipes] = useState([]); // recipes rendered to screen based on what cusisine user has chosen
+  const [recipes, setRecipes] = useState([]); // recipes rendered to screen based on what cuisine user has chosen
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -15,6 +15,7 @@ function Cuisine() {
   const { cuisineType } = useParams();
   const { diet } = useParams();
 
+  // get the cuisine recipes and also whether they are vegan or vegetarian recipes
   useEffect(() => {
       async function fetchCuisineRecipes() {
           try {
@@ -41,6 +42,7 @@ function Cuisine() {
     return <div>Error: {error.message}</div>;
   }
 
+  // display the cuisine recipes on the screen
   return (
     <div>
       <HomeButton />

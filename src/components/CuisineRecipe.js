@@ -6,9 +6,9 @@ import FetchRecipeData from './FetchRecipeData';
 
 function CuisineRecipe() {
 
-  const { id } = useParams();
+  const { id } = useParams(); // extract the recipe id from the url that we want the information on
   const apiKey = "d0f20c3fe5af4078b0d2bb104a92fde9";
-  const [recipeData, setRecipeData] = useState(null);
+  const [recipeData, setRecipeData] = useState(null); // instructions, ingredients, image, title of recipe
 
   // function for handling data fetched by FetchRecipeData component 
   function handleRecipeDataFetched(data) {
@@ -20,6 +20,7 @@ function CuisineRecipe() {
     console.error("Error fetching recipe data: ", error);
   };
 
+  // displaying the recipe details to the screen
   return (
     <div>
       <HomeButton />
