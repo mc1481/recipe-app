@@ -9,7 +9,9 @@ This react app uses [https://spoonacular.com/food-api] to fetch the recipes.
 
 ## Running the App
 
-In the project directory, you can run:
+Clone the repository.
+
+In the project directory, 
 
 ### `npm start`
 
