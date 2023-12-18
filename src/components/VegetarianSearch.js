@@ -5,9 +5,9 @@ import FetchRecipes from "./FetchRecipe";
 
 function VegetarianSearch() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [recipes, setRecipes] = useState([]);  
-  const [noResults, setNoResults] = useState(false);
-  const [selectedCuisine, setSelectedCuisine] = useState('');
+  const [recipes, setRecipes] = useState([]);  // recipes rendered to the screen after user enters a search
+  const [noResults, setNoResults] = useState(false);  // will render an error message if no results from api response
+  const [selectedCuisine, setSelectedCuisine] = useState(''); // cuisine variable the user has selected
   const diet = "vegetarian";
   const apiKey = "d0f20c3fe5af4078b0d2bb104a92fde9";
   const cuisines = ["Chinese", "French", "Italian", "Mexican", "Indian"];
@@ -22,7 +22,7 @@ function VegetarianSearch() {
     setSelectedCuisine(event.target.value);
   }
 
-  // function for hadnling recipes fetched by FetchRecipes component
+  // function for handling recipes fetched by FetchRecipes component
   const handleRecipesFetched = (recipes) => {
     setRecipes(recipes);
     setNoResults(recipes.length === 0);
@@ -38,6 +38,7 @@ function VegetarianSearch() {
       <HomeButton />
       <div className="vegetarian-search">
         <h1>Vegetarian Recipes</h1>
+        {/* input box for users search term */}
         <input
           type="text"
           placeholder="Search for vegetarian recipes"
@@ -46,6 +47,7 @@ function VegetarianSearch() {
         />
       </div>
       
+      {/* component that will get the recipes from api based on user search term */}
       <FetchRecipes
         diet={diet}
         searchTerm={searchTerm}
@@ -54,6 +56,7 @@ function VegetarianSearch() {
         apiKey={apiKey}
       />
 
+      {/* render an error message if no results from api*/}
       {noResults ? (
         <p className="no-results">Sorry, there are no vegetarian recipes matching your search</p>
       ) : null}

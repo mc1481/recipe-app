@@ -1,4 +1,5 @@
 import React from 'react';
+// originally used BrowserRouter but had to change to HashRouter after I deployed to Github Pages to get it to work
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import MealType from './components/MealType';

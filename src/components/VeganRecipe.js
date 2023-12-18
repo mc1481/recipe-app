@@ -6,9 +6,9 @@ import FetchRecipeData from './FetchRecipeData';
 
 function VeganRecipe() {
 
-  const { id } = useParams();
+  const { id } = useParams(); // id of recipe we want information on, extracted from url
   const apiKey = "d0f20c3fe5af4078b0d2bb104a92fde9";
-  const [recipeData, setRecipeData] = useState(null);
+  const [recipeData, setRecipeData] = useState(null); // instructions, ingredients, image, title of recipe
 
   // function for handling data fetched by FetchRecipeData component 
   function handleRecipeDataFetched(data) {
@@ -20,6 +20,7 @@ function VeganRecipe() {
     console.error("Error fetching recipe data: ", error);
   };
 
+  // displaying the ingredients, instructions, image and title of recipe
   return (
     <div className="vegan-recipe-background">
       <HomeButton />

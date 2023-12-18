@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from 'react';
 
-// this function is used by VeganSearch.js, VegetarianSearch.js, CuisineRecipe.js and 
+// this function is used by VeganSearch.js, VegetarianSearch.js, CuisineRecipe.js and MealTypeRecipe.js
 function FetchRecipes({ diet, searchTerm, onRecipesFetched, onNoResults, apiKey}) {
   const [loading, setLoading] = useState(false);
 

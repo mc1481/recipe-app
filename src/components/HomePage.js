@@ -6,6 +6,7 @@ import bowlHandImage from  './../CSS/bowl-hand-3.jpeg';
 
 function HomePage() {
 
+  // variable user has selected from the dropdown list
   const [selectedMeal, setSelectedMeal] = useState(''); 
 
   // Function to handle the change in meal type

@@ -6,7 +6,7 @@ import HomeButton from './HomeButton';
 import BackButton from './BackButton';
 
 function Cuisine() {
-  const [recipes, setRecipes] = useState([]);
+  const [recipes, setRecipes] = useState([]); // recipes rendered to screen based on what cusisine user has chosen
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
